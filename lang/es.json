@@ -1,0 +1,78 @@
+{
+  "SNT": {
+    "Title": "Rastreador de negociación",
+    "Tabs": { "Tracker": "Seguimiento", "Settings": "Ajustes" },
+    "Aria": { "Sections": "Secciones del rastreador" },
+    "Fields": {
+      "Actor": "PNJ / Actor",
+      "Interest": "Interés",
+      "Patience": "Paciencia",
+      "Motivations": "Motivaciones",
+      "Pitfalls": "Escollos",
+      "Notes": "Notas del DJ",
+      "Min": "Mín.",
+      "Max": "Máx.",
+      "Label": "Etiqueta",
+      "Description": "Descripción",
+      "AvailableTraits": "Rasgos disponibles",
+      "TraitName": "Nombre del rasgo"
+    },
+    "Actions": { "Add": "Añadir", "Remove": "Eliminar" },
+    "Placeholders": {
+      "SearchActor": "Busca un actor...",
+      "Notes": "Contexto, concesiones, promesas, límites...",
+      "TraitName": "Nuevo nombre de rasgo..."
+    },
+    "Help": {
+      "Motivations": "Enfoques, valores o deseos que pueden hacer que este PNJ sea más receptivo.",
+      "Pitfalls": "Temas, presiones o valores que pueden agriar la conversación."
+    },
+    "Empty": {
+      "Motivations": "No hay motivaciones registradas.",
+      "Pitfalls": "No hay escollos registrados.",
+      "NoActor": "Selecciona un actor para seguir una negociación.",
+      "NoActorResults": "No hay actores coincidentes.",
+      "AvailableTraits": "No hay rasgos disponibles."
+    },
+    "Settings": {
+      "Open": {
+        "Name": "Rastreador de negociación",
+        "Label": "Abrir rastreador",
+        "Hint": "Abre el rastreador de negociación sin requerir una escena activa."
+      }
+    },
+    "Notifications": { "OnlyGM": "Solo el DJ puede usar el rastreador de negociación." },
+    "Traits": {
+      "Benevolence": "Benevolencia",
+      "Discovery": "Descubrimiento",
+      "Freedom": "Libertad",
+      "Greed": "Codicia",
+      "HigherAuthority": "Autoridad superior",
+      "Justice": "Justicia",
+      "Legacy": "Legado",
+      "Peace": "Paz",
+      "Power": "Poder",
+      "Protection": "Protección",
+      "Revelry": "Juerga",
+      "Vengeance": "Venganza"
+    },
+    "Defaults": {
+      "Interest": {
+        "0": { "Label": "No, y...", "Summary": "El PNJ se niega y la situación empeora." },
+        "1": { "Label": "No.", "Summary": "El PNJ rechaza la propuesta." },
+        "2": { "Label": "No, pero...", "Summary": "El PNJ se niega, pero deja espacio para una concesión o alternativa." },
+        "3": { "Label": "Sí, pero...", "Summary": "El PNJ acepta con un coste, condición o complicación." },
+        "4": { "Label": "Sí.", "Summary": "El PNJ acepta la propuesta." },
+        "5": { "Label": "Sí, y...", "Summary": "El PNJ acepta y ofrece algo más." }
+      },
+      "Patience": {
+        "0": { "Label": "Cerrada", "Summary": "La negociación ha terminado. Usa el interés actual como oferta final." },
+        "1": { "Label": "Casi agotada", "Summary": "El PNJ tolerará muy poca presión adicional." },
+        "2": { "Label": "Tensa", "Summary": "La conversación es frágil y requiere cuidado." },
+        "3": { "Label": "Estable", "Summary": "Aún hay margen para algunos intercambios significativos." },
+        "4": { "Label": "Paciente", "Summary": "El PNJ está dispuesto a seguir hablando." },
+        "5": { "Label": "Muy paciente", "Summary": "El PNJ está muy dispuesto a escuchar al grupo." }
+      }
+    }
+  }
+}

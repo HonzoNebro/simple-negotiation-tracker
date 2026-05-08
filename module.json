@@ -1,0 +1,45 @@
+{
+  "id": "simple-negotiation-tracker",
+  "title": "Simple Negotiation Tracker",
+  "description": "A manual, system-agnostic negotiation tracker inspired by Draw Steel.",
+  "version": "0.4.0",
+  "manifest": "https://raw.githubusercontent.com/HonzoNebro/simple-negotiation-tracker/main/module.json",
+  "download": "https://github.com/HonzoNebro/simple-negotiation-tracker/archive/refs/tags/v0.4.0.zip",
+  "url": "https://github.com/HonzoNebro/simple-negotiation-tracker",
+  "bugs": "https://github.com/HonzoNebro/simple-negotiation-tracker/issues",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "HonzoNebro",
+      "url": "https://github.com/HonzoNebro"
+    }
+  ],
+  "esmodules": [
+    "src/module.mjs"
+  ],
+  "styles": [
+    "styles/tracker.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "gl",
+      "name": "Galego",
+      "path": "lang/gl.json"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "flags": {}
+}

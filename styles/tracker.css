@@ -1,0 +1,203 @@
+.simple-negotiation-tracker .window-content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.snt-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+  min-height: 0;
+}
+
+.snt-toolbar {
+  padding: 12px;
+  border-bottom: 1px solid var(--color-border-light-2);
+  background: var(--color-bg-option, rgba(0, 0, 0, 0.04));
+}
+
+.snt-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.snt-tracker textarea,
+.snt-tracker input,
+.snt-tracker select {
+  width: 100%;
+}
+
+.snt-actor-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 92px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+
+.snt-actor-results button {
+  flex: 0 1 auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.snt-actor-results button.active {
+  font-weight: 700;
+  outline: 2px solid var(--color-border-highlight, currentColor);
+}
+
+.snt-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--color-border-light-2);
+}
+
+.snt-tabs a {
+  flex: 1;
+  padding: 8px 10px;
+  text-align: center;
+  border-right: 1px solid var(--color-border-light-2);
+  cursor: pointer;
+}
+
+.snt-tabs a:last-child {
+  border-right: 0;
+}
+
+.snt-tabs a.active {
+  background: var(--color-bg-btn-minor-active, rgba(0, 0, 0, 0.08));
+  font-weight: 700;
+}
+
+.snt-tab {
+  display: none;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.snt-tab.active {
+  display: block;
+}
+
+.snt-identity h2,
+.snt-card h3,
+.snt-track h3 {
+  margin: 0;
+}
+
+.snt-identity {
+  margin-bottom: 10px;
+}
+
+.snt-card {
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: var(--color-bg, transparent);
+}
+
+.snt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.snt-track-head,
+.snt-add-row,
+.snt-list-head,
+.snt-range-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.snt-stepper {
+  display: grid;
+  grid-template-columns: 28px 52px 28px;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.snt-stepper input {
+  text-align: center;
+}
+
+.snt-help,
+.snt-track p,
+.snt-empty {
+  color: var(--color-text-secondary, #666);
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.snt-add-row {
+  margin-top: 8px;
+}
+
+.snt-add-row select {
+  flex: 1;
+}
+
+.snt-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.snt-list li {
+  border-top: 1px solid var(--color-border-light-2);
+  padding: 8px 0 0;
+  margin-top: 8px;
+}
+
+.snt-list-head button {
+  flex: 0 0 auto;
+}
+
+.snt-list input {
+  margin-top: 6px;
+}
+
+.snt-range-row {
+  justify-content: flex-start;
+  margin: 8px 0;
+}
+
+.snt-range-row label {
+  flex: 0 0 120px;
+  font-weight: 600;
+}
+
+.snt-level-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.snt-level-row {
+  display: grid;
+  grid-template-columns: 32px minmax(90px, 0.8fr) minmax(140px, 1.6fr);
+  gap: 6px;
+  align-items: center;
+}
+
+.snt-level-row span {
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .snt-grid,
+  .snt-level-row {
+    grid-template-columns: 1fr;
+  }
+}

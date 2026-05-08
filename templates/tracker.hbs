@@ -1,0 +1,177 @@
+<form class="snt-tracker">
+  <header class="snt-toolbar">
+    <div>
+      <label class="snt-label" for="snt-actor-search">{{labels.actor}}</label>
+      <input id="snt-actor-search" type="search" value="{{actorQuery}}" placeholder="{{labels.searchActor}}" data-action="actor-search" autocomplete="off" />
+      <div class="snt-actor-results">
+        {{#each actors}}
+        <button type="button" class="{{#if this.selected}}active{{/if}}" data-actor-id="{{this.id}}">{{this.name}}</button>
+        {{else}}
+        <p class="snt-empty">{{labels.noActorResults}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </header>
+
+  {{#if hasActor}}
+  <nav class="snt-tabs" aria-label="{{labels.sections}}">
+    <a class="active" data-tab="tracker">{{labels.trackerTab}}</a>
+    <a data-tab="settings">{{labels.settingsTab}}</a>
+  </nav>
+
+  <section class="snt-tab active" data-tab-panel="tracker">
+    <div class="snt-identity">
+      <h2>{{actorName}}</h2>
+    </div>
+
+    <section class="snt-grid">
+      <article class="snt-card snt-track">
+        <div class="snt-track-head">
+          <h3>{{labels.interest}}</h3>
+          <div class="snt-stepper">
+            <button type="button" data-action="interest-dec" aria-label="-">-</button>
+            <input type="number" min="{{data.tracks.interest.min}}" max="{{data.tracks.interest.max}}" step="1" value="{{data.interest}}" data-save-field="interest" />
+            <button type="button" data-action="interest-inc" aria-label="+">+</button>
+          </div>
+        </div>
+        <strong>{{interest.value}} - {{interest.label}}</strong>
+        <p>{{interest.summary}}</p>
+      </article>
+
+      <article class="snt-card snt-track">
+        <div class="snt-track-head">
+          <h3>{{labels.patience}}</h3>
+          <div class="snt-stepper">
+            <button type="button" data-action="patience-dec" aria-label="-">-</button>
+            <input type="number" min="{{data.tracks.patience.min}}" max="{{data.tracks.patience.max}}" step="1" value="{{data.patience}}" data-save-field="patience" />
+            <button type="button" data-action="patience-inc" aria-label="+">+</button>
+          </div>
+        </div>
+        <strong>{{patience.value}} - {{patience.label}}</strong>
+        <p>{{patience.summary}}</p>
+      </article>
+    </section>
+
+    <section class="snt-card">
+      <h3>{{labels.motivations}}</h3>
+      <p class="snt-help">{{labels.motivationHelp}}</p>
+      <div class="snt-add-row">
+        <select data-motivation-select>
+          {{#each traits}}
+          <option value="{{this.id}}">{{this.label}}</option>
+          {{else}}
+          <option value="">{{labels.noAvailableTraits}}</option>
+          {{/each}}
+        </select>
+        <button type="button" data-action="add-motivation">{{labels.add}}</button>
+      </div>
+      <ul class="snt-list">
+        {{#each data.motivations}}
+        <li>
+          <div class="snt-list-head">
+            <strong>{{this.label}}</strong>
+            <button type="button" data-action="remove-motivation" data-index="{{@index}}">{{../labels.remove}}</button>
+          </div>
+          <input type="text" value="{{this.notes}}" placeholder="{{../labels.notes}}" data-save-field="motivation-notes-{{@index}}" />
+        </li>
+        {{else}}
+        <li class="snt-empty">{{labels.noMotivations}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="snt-card">
+      <h3>{{labels.pitfalls}}</h3>
+      <p class="snt-help">{{labels.pitfallHelp}}</p>
+      <div class="snt-add-row">
+        <select data-pitfall-select>
+          {{#each traits}}
+          <option value="{{this.id}}">{{this.label}}</option>
+          {{else}}
+          <option value="">{{labels.noAvailableTraits}}</option>
+          {{/each}}
+        </select>
+        <button type="button" data-action="add-pitfall">{{labels.add}}</button>
+      </div>
+      <ul class="snt-list">
+        {{#each data.pitfalls}}
+        <li>
+          <div class="snt-list-head">
+            <strong>{{this.label}}</strong>
+            <button type="button" data-action="remove-pitfall" data-index="{{@index}}">{{../labels.remove}}</button>
+          </div>
+          <input type="text" value="{{this.notes}}" placeholder="{{../labels.notes}}" data-save-field="pitfall-notes-{{@index}}" />
+        </li>
+        {{else}}
+        <li class="snt-empty">{{labels.noPitfalls}}</li>
+        {{/each}}
+      </ul>
+    </section>
+
+    <section class="snt-card">
+      <label class="snt-label" for="snt-notes">{{labels.notes}}</label>
+      <textarea id="snt-notes" rows="5" data-save-field="notes" placeholder="{{labels.notesPlaceholder}}">{{data.notes}}</textarea>
+    </section>
+  </section>
+
+  <section class="snt-tab" data-tab-panel="settings">
+    <section class="snt-card">
+      <h3>{{labels.interest}}</h3>
+      <div class="snt-range-row">
+        <label>{{labels.min}} <input type="number" value="{{data.tracks.interest.min}}" data-save-field="interest-min" /></label>
+        <label>{{labels.max}} <input type="number" value="{{data.tracks.interest.max}}" data-save-field="interest-max" /></label>
+      </div>
+      <div class="snt-level-editor">
+        {{#each data.tracks.interest.levels}}
+        <div class="snt-level-row">
+          <span>{{this.value}}</span>
+          <input type="text" value="{{this.label}}" aria-label="{{../labels.label}}" data-save-field="interest-level-label-{{this.value}}" />
+          <input type="text" value="{{this.summary}}" aria-label="{{../labels.description}}" data-save-field="interest-level-summary-{{this.value}}" />
+        </div>
+        {{/each}}
+      </div>
+    </section>
+
+    <section class="snt-card">
+      <h3>{{labels.patience}}</h3>
+      <div class="snt-range-row">
+        <label>{{labels.min}} <input type="number" value="{{data.tracks.patience.min}}" data-save-field="patience-min" /></label>
+        <label>{{labels.max}} <input type="number" value="{{data.tracks.patience.max}}" data-save-field="patience-max" /></label>
+      </div>
+      <div class="snt-level-editor">
+        {{#each data.tracks.patience.levels}}
+        <div class="snt-level-row">
+          <span>{{this.value}}</span>
+          <input type="text" value="{{this.label}}" aria-label="{{../labels.label}}" data-save-field="patience-level-label-{{this.value}}" />
+          <input type="text" value="{{this.summary}}" aria-label="{{../labels.description}}" data-save-field="patience-level-summary-{{this.value}}" />
+        </div>
+        {{/each}}
+      </div>
+    </section>
+
+    <section class="snt-card">
+      <h3>{{labels.availableTraits}}</h3>
+      <div class="snt-add-row">
+        <input type="text" placeholder="{{labels.traitNamePlaceholder}}" aria-label="{{labels.traitName}}" data-available-trait-input />
+        <button type="button" data-action="add-available-trait">{{labels.add}}</button>
+      </div>
+      <ul class="snt-list">
+        {{#each data.availableTraits}}
+        <li>
+          <div class="snt-list-head">
+            <strong>{{this.label}}</strong>
+            <button type="button" data-action="remove-available-trait" data-index="{{@index}}">{{../labels.remove}}</button>
+          </div>
+        </li>
+        {{else}}
+        <li class="snt-empty">{{labels.noAvailableTraits}}</li>
+        {{/each}}
+      </ul>
+    </section>
+  </section>
+  {{else}}
+  <section class="snt-card">
+    <p class="snt-empty">{{labels.noActor}}</p>
+  </section>
+  {{/if}}
+</form>

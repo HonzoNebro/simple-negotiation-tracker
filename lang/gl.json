@@ -1,0 +1,78 @@
+{
+  "SNT": {
+    "Title": "Rastreador de negociación",
+    "Tabs": { "Tracker": "Seguimento", "Settings": "Axustes" },
+    "Aria": { "Sections": "Seccións do rastreador" },
+    "Fields": {
+      "Actor": "PNX / Actor",
+      "Interest": "Interese",
+      "Patience": "Paciencia",
+      "Motivations": "Motivacións",
+      "Pitfalls": "Atrancos",
+      "Notes": "Notas da DJ",
+      "Min": "Mín.",
+      "Max": "Máx.",
+      "Label": "Etiqueta",
+      "Description": "Descrición",
+      "AvailableTraits": "Trazos dispoñibles",
+      "TraitName": "Nome do trazo"
+    },
+    "Actions": { "Add": "Engadir", "Remove": "Eliminar" },
+    "Placeholders": {
+      "SearchActor": "Busca un actor...",
+      "Notes": "Contexto, concesións, promesas, límites...",
+      "TraitName": "Novo nome de trazo..."
+    },
+    "Help": {
+      "Motivations": "Enfoques, valores ou desexos que poden facer que este PNX sexa máis receptivo.",
+      "Pitfalls": "Temas, presións ou valores que poden empeorar a conversa."
+    },
+    "Empty": {
+      "Motivations": "Non hai motivacións rexistradas.",
+      "Pitfalls": "Non hai atrancos rexistrados.",
+      "NoActor": "Selecciona un actor para seguir unha negociación.",
+      "NoActorResults": "Non hai actores coincidentes.",
+      "AvailableTraits": "Non hai trazos dispoñibles."
+    },
+    "Settings": {
+      "Open": {
+        "Name": "Rastreador de negociación",
+        "Label": "Abrir rastreador",
+        "Hint": "Abre o rastreador de negociación sen requirir unha escena activa."
+      }
+    },
+    "Notifications": { "OnlyGM": "Só a DJ pode usar o rastreador de negociación." },
+    "Traits": {
+      "Benevolence": "Benevolencia",
+      "Discovery": "Descubrimento",
+      "Freedom": "Liberdade",
+      "Greed": "Cobiza",
+      "HigherAuthority": "Autoridade superior",
+      "Justice": "Xustiza",
+      "Legacy": "Legado",
+      "Peace": "Paz",
+      "Power": "Poder",
+      "Protection": "Protección",
+      "Revelry": "Festa",
+      "Vengeance": "Vinganza"
+    },
+    "Defaults": {
+      "Interest": {
+        "0": { "Label": "Non, e...", "Summary": "O PNX négase e a situación empeora." },
+        "1": { "Label": "Non.", "Summary": "O PNX rexeita a proposta." },
+        "2": { "Label": "Non, pero...", "Summary": "O PNX négase, pero deixa espazo para unha concesión ou alternativa." },
+        "3": { "Label": "Si, pero...", "Summary": "O PNX acepta cun custo, condición ou complicación." },
+        "4": { "Label": "Si.", "Summary": "O PNX acepta a proposta." },
+        "5": { "Label": "Si, e...", "Summary": "O PNX acepta e ofrece algo máis." }
+      },
+      "Patience": {
+        "0": { "Label": "Pechada", "Summary": "A negociación rematou. Usa o interese actual como oferta final." },
+        "1": { "Label": "Case esgotada", "Summary": "O PNX tolerará moi pouca presión adicional." },
+        "2": { "Label": "Tensa", "Summary": "A conversa é fráxil e require coidado." },
+        "3": { "Label": "Estable", "Summary": "Aínda hai marxe para algúns intercambios significativos." },
+        "4": { "Label": "Paciente", "Summary": "O PNX está disposto a seguir falando." },
+        "5": { "Label": "Moi paciente", "Summary": "O PNX está moi disposto a escoitar o grupo." }
+      }
+    }
+  }
+}

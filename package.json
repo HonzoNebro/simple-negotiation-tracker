@@ -1,0 +1,10 @@
+{
+  "name": "simple-negotiation-tracker",
+  "version": "0.4.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
